@@ -24,7 +24,7 @@ export default async function run() {
         const inputs = getInputs();
         const azureSqlAction = new AzureSqlAction(inputs);
         
-        if (!inputs.useManagedInstance) {
+        if (false) {
             const runnerIPAddress = await SqlUtils.detectIPAddress(inputs.connectionConfig);
             if (runnerIPAddress) {
                 let azureResourceAuthorizer = await AuthorizerFactory.getAuthorizer();
