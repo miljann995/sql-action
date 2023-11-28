@@ -1,4 +1,4 @@
-name: 'Azure SQL Deploy'
+name: 'miljann995 Azure SQL Deploy'
 description: 'Deploy a database project, DACPAC, or a SQL script to Azure SQL database'
 inputs:
   connection-string:
@@ -15,6 +15,9 @@ inputs:
     required: false
   build-arguments:
     description: 'In case of a .sqlproj file, additional arguments that will be applied to dotnet build when building the database project.'
+    required: false
+  use-managed-instance:
+    description: 'If set to "true", connection will be established as per SQL Managed Instance mode.'
     required: false
 runs:
   using: 'node16'
